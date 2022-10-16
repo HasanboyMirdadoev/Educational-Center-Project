@@ -1,0 +1,378 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E20BCA33-2C6D-48F5-BB7C-13068CF967A6}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Educational_Center_Project</RootNamespace>
+    <AssemblyName>Educational Center Project</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Guna.UI2, Version=2.0.3.5, Culture=neutral, PublicKeyToken=4015e4865bda28a4, processorArchitecture=MSIL">
+      <HintPath>..\packages\Guna.UI2.WinForms.2.0.3.5\lib\net40\Guna.UI2.dll</HintPath>
+    </Reference>
+    <Reference Include="LiveCharts, Version=0.9.7.0, Culture=neutral, PublicKeyToken=0bc1f845d1ebb8df, processorArchitecture=MSIL">
+      <HintPath>..\packages\LiveCharts.0.9.7\lib\net45\LiveCharts.dll</HintPath>
+    </Reference>
+    <Reference Include="LiveCharts.WinForms, Version=0.9.7.1, Culture=neutral, PublicKeyToken=0bc1f845d1ebb8df, processorArchitecture=MSIL">
+      <HintPath>..\packages\LiveCharts.WinForms.0.9.7.1\lib\net45\LiveCharts.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="LiveCharts.Wpf, Version=0.9.7.0, Culture=neutral, PublicKeyToken=0bc1f845d1ebb8df, processorArchitecture=MSIL">
+      <HintPath>..\packages\LiveCharts.Wpf.0.9.7\lib\net45\LiveCharts.Wpf.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Configuration.ConfigurationManager, Version=7.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Configuration.ConfigurationManager.7.0.0-rc.1.22426.10\lib\net462\System.Configuration.ConfigurationManager.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.OracleClient" />
+    <Reference Include="System.Data.SqlClient, Version=4.6.1.3, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.SqlClient.4.8.3\lib\net461\System.Data.SqlClient.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Security.AccessControl, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.AccessControl.6.0.0\lib\net461\System.Security.AccessControl.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Permissions, Version=7.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Permissions.7.0.0-rc.1.22426.10\lib\net462\System.Security.Permissions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Principal.Windows, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Principal.Windows.5.0.0\lib\net461\System.Security.Principal.Windows.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="WindowsFormsIntegration" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AddNotes\AddNotesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddNotes\AddNotesForm.Designer.cs">
+      <DependentUpon>AddNotesForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddNotes\DashSortNotes.cs" />
+    <Compile Include="AddNotes\Note.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AddNotes\Note.Designer.cs">
+      <DependentUpon>Note.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddNotes\NoteDatas.cs" />
+    <Compile Include="Dashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dashboard.Designer.cs">
+      <DependentUpon>Dashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EduCenterDBDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EduCenterDBDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Groups\GroupAdmin.cs" />
+    <Compile Include="Groups\GroupDatas.cs" />
+    <Compile Include="Groups\GroupDB.cs" />
+    <Compile Include="Groups\GroupForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Groups\GroupForm.Designer.cs">
+      <DependentUpon>GroupForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Groups\GroupHelperClasses\DeleteOrChangeStudents.cs" />
+    <Compile Include="Groups\GroupHelperClasses\StudentTickClass.cs" />
+    <Compile Include="HistoryFolder\HistoryDBDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HistoryDBDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HistoryFolder\HistoryAdmin.cs" />
+    <Compile Include="HistoryFolder\HistoryDB.cs" />
+    <Compile Include="HistoryFolder\HistoryForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HistoryFolder\HistoryForm.Designer.cs">
+      <DependentUpon>HistoryForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HistoryFolder\HistoryStudentAdmin.cs" />
+    <Compile Include="HistoryFolder\HistoryStudentDatas.cs" />
+    <Compile Include="HistoryFolder\SingleStudentHistoryAdmin.cs" />
+    <Compile Include="OverallProps\BaseDB.cs" />
+    <Compile Include="OverallProps\DashHelpers\NotificationsFile\Notification.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="OverallProps\DashHelpers\NotificationsFile\Notification.Designer.cs">
+      <DependentUpon>Notification.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OverallProps\DashHelpers\NotificationsFile\Notifications.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OverallProps\DashHelpers\NotificationsFile\Notifications.Designer.cs">
+      <DependentUpon>Notifications.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OverallProps\DashHelpers\StudentExamScoreFile\StudentExamScoreAdmin.cs" />
+    <Compile Include="OverallProps\DashHelpers\StudentExamScoreFile\StudentExamScoreDatas.cs" />
+    <Compile Include="OverallProps\DashHelpers\StudentExamScoreFile\StudentExamScores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OverallProps\DashHelpers\StudentExamScoreFile\StudentExamScores.Designer.cs">
+      <DependentUpon>StudentExamScores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OverallProps\TableSaver.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="RegisterCenter\AddSubjects.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegisterCenter\AddSubjects.Designer.cs">
+      <DependentUpon>AddSubjects.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RegisterCenter\RegisterFirstWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegisterCenter\RegisterFirstWindow.Designer.cs">
+      <DependentUpon>RegisterFirstWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Students\StudentAdmin.cs" />
+    <Compile Include="Students\StudentDatas.cs" />
+    <Compile Include="Students\StudentDB.cs" />
+    <Compile Include="Students\StudentForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Students\StudentForm.Designer.cs">
+      <DependentUpon>StudentForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Teachers\TeacherDatas.cs" />
+    <Compile Include="Teachers\TeacherDB.cs" />
+    <Compile Include="Teachers\TeacherForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Teachers\TeacherForm.Designer.cs">
+      <DependentUpon>TeacherForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TimeTables\TimeTable.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TimeTables\TimeTable.Designer.cs">
+      <DependentUpon>TimeTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TimeTables\TimeTableMaker.cs" />
+    <Compile Include="TotalResultFile\GroupTotalDatas.cs" />
+    <Compile Include="TotalResultFile\MakeCharts.cs" />
+    <Compile Include="TotalResultFile\MonthTotalResult.cs" />
+    <Compile Include="TotalResultFile\RefreshAll.cs" />
+    <Compile Include="TotalResultFile\StudentsWithDeptDatas.cs" />
+    <Compile Include="TotalResultFile\StudentTotalDatas.cs" />
+    <Compile Include="TotalResultFile\TeacherTotalDatas.cs" />
+    <Compile Include="TotalResultFile\TotalMonthDatas.cs" />
+    <Compile Include="TotalResultFile\TotalResult.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TotalResultFile\TotalResult.Designer.cs">
+      <DependentUpon>TotalResult.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TotalResultFile\TotalResultAdmin.cs" />
+    <Compile Include="TotalResultFile\TotalResultListMaker.cs" />
+    <Compile Include="TotalResultFile\TotalYearDatas.cs" />
+    <EmbeddedResource Include="AddNotes\AddNotesForm.resx">
+      <DependentUpon>AddNotesForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddNotes\Note.resx">
+      <DependentUpon>Note.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dashboard.resx">
+      <DependentUpon>Dashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Groups\GroupForm.resx">
+      <DependentUpon>GroupForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HistoryFolder\HistoryForm.resx">
+      <DependentUpon>HistoryForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OverallProps\DashHelpers\NotificationsFile\Notifications.resx">
+      <DependentUpon>Notifications.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OverallProps\DashHelpers\StudentExamScoreFile\StudentExamScores.resx">
+      <DependentUpon>StudentExamScores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RegisterCenter\AddSubjects.resx">
+      <DependentUpon>AddSubjects.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RegisterCenter\RegisterFirstWindow.resx">
+      <DependentUpon>RegisterFirstWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Students\StudentForm.resx">
+      <DependentUpon>StudentForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Teachers\TeacherForm.resx">
+      <DependentUpon>TeacherForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TimeTables\TimeTable.resx">
+      <DependentUpon>TimeTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TotalResultFile\TotalResult.resx">
+      <DependentUpon>TotalResult.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="EduCenterDBDataSet.xsc">
+      <DependentUpon>EduCenterDBDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="EduCenterDBDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>EduCenterDBDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="EduCenterDBDataSet.xss">
+      <DependentUpon>EduCenterDBDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="HistoryFolder\HistoryDBDataSet.xsc">
+      <DependentUpon>HistoryDBDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="HistoryFolder\HistoryDBDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>HistoryDBDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="HistoryFolder\HistoryDBDataSet.xss">
+      <DependentUpon>HistoryDBDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\200321300329_378479.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-education-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-team-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-school-director-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-planner-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-money-yours-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\monitoring.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-close-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download-icon-notifications+none+24px-131987943197812922_24.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="EduCenterDB.mdf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="EduCenterDB_log.ldf">
+      <DependentUpon>EduCenterDB.mdf</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="HistoryFolder\HistoryDB.mdf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="HistoryFolder\HistoryDB_log.ldf">
+      <DependentUpon>HistoryDB.mdf</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Include="Resources\icons8-search-64.png" />
+    <None Include="Resources\icons8-forward-button-48.png" />
+    <None Include="Resources\icons8-add-new-48.png" />
+    <None Include="Resources\icons8-back-arrow-48.png" />
+    <None Include="Resources\Actions-window-close-icon.png" />
+    <None Include="Resources\Accept-icon %281%29.png" />
+    <None Include="Resources\Accept-icon %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 и x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
